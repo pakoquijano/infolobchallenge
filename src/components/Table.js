@@ -126,5 +126,7 @@ Table.propTypes = {
 
 Table.defaultProps = {
   breakpoint: '480px',
+  data: [],
+  rowConfig: [],
 }
 export default Table
