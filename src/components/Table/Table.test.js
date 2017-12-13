@@ -105,23 +105,23 @@ it('should render something',() => {
 })
 
 it('should render a th element for every object in the rowConfig', () => {
-  expect(wrapper.find('thead > tr').children()).toHaveLenght(mockRowConfig.lenght)
+  expect(wrapper.find('thead > tr').children()).toHaveLength(mockRowConfig.length)
 })
 
 it('should render the headTitle string in each th element', () => {
-  expect(wrapper.find('thead > tr').children()).toBeMoreThan(0)
+  expect(wrapper.find('thead > tr').children().length).toBeGreaterThan(0)
   wrapper.find('thead > tr').children().forEach((node,index) => {
     expect(node.text()).toEqual(mockRowConfig[index].headTitle)
   })
 })
 
 it('should render a tr element for every object in the data array', () => {
-  expect(wrapper.find('tbody').children()).toHaveLenght(mockData.lenght)
+  expect(wrapper.find('tbody').children()).toHaveLength(mockData.length)
 })
 
 it('should have in every tr element the same number of td elements as objects in the rowConfig array', () => {
-  expect(wrapper.find('tbody').children()).toBeMoreThan(0)
+  expect(wrapper.find('tbody').children().length).toBeGreaterThan(0)
   wrapper.find('tbody').children().forEach((node) => {
-    expect(node.children).toHaveLenght(mockRowConfig.lenght)
+    expect(node.children()).toHaveLength(mockRowConfig.length)
   })
 })
