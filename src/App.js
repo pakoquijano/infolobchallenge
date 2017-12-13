@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import Table from './components/Table/Table'
+import Table from './components/Table'
 import defaultPic from './images/default-user.png'
 
 //Declaration of styles using styled components for the general presentation of the page
@@ -33,7 +33,6 @@ const UserName = styled.div`
 const Link = styled.a`
   color: #222;
 `
-
 /*
   Table component require configuration in the columns, this props will accept an array of objects,
   then for each column you want to display, you push a object in the array, the object should contain
